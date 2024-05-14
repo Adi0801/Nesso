@@ -1,7 +1,7 @@
 export interface PokemonType {
     id: number;
     name: string;
-    types: string[];
+    types: string;
     sprite: string;
   }
 

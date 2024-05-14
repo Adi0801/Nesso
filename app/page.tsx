@@ -31,8 +31,10 @@ export default function Home() {
   // deletePokemon.mutate();
  
   const fetchPokemons = async () => {
-    const data = await getPokemon.data;
-    setPokemons(data);
+    const data = getPokemon.data;
+    if(data){
+      setPokemons(data);
+    }
   };
 
   // Use useEffect to fetch Pokemon data after component mounts and whenever a new Pokemon is added
@@ -99,7 +101,7 @@ export default function Home() {
       </Grid>
     
 
-      <Grid item sx={{ position: 'fixed', top: 300, right: -977, p: 5, md: { p: 10 } }} container spacing={2}>
+      {/* <Grid item sx={{ position: 'fixed', top: 300, right: -977, p: 5, md: { p: 10 } }} container spacing={2}>
 
         <Grid item>
           <Link href="/multiple">
@@ -108,7 +110,7 @@ export default function Home() {
             </Button>
           </Link>
         </Grid>
-      </Grid>
+      </Grid> */}
 
        <Grid item sx={{ position: 'fixed', top: 0, right: -200, p: 5, md: { p: 10 } }} container spacing={2}>
 

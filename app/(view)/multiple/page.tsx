@@ -21,7 +21,7 @@ function MultipleView() {
     e.preventDefault();
     console.log('Submitted Names:', names);
     const data = await getPokemon.data;
-    setPokemonData(data || []);
+    // setPokemonData(data);
     setNames([]);
   };
 
